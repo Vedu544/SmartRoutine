@@ -1,84 +1,83 @@
-"use client";
+import './App.css'
 
-import { Card, CardHeader, CardTitle, CardDescription, CardBody, CardActions } from "@/components/ui/card";
-import { Divider } from "@/components/ui/divider";
-import { Button } from "@/components/ui/button";
-
-export default function App() {
+function App() {
   return (
-    <div className="h-screen">
-
-      {/* NAVBAR */}
-      <div className="navbar bg-base-100 shadow">
+    <div className="min-h-screen bg-base-200">
+      {/* Navbar */}
+      <div className="navbar bg-base-100 shadow-md px-6">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">SmartRoutine</a>
+          <a className="text-2xl font-bold text-primary">SmartRoutine</a>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>Community</a></li>
-            <li><a>AI Maker</a></li>
-            <li><a>Login</a></li>
-          </ul>
+        <div className="flex-none gap-4">
+          <button className="btn btn-ghost">Home</button>
+          <button className="btn btn-ghost">Community</button>
+          <button className="btn btn-ghost">AI Routine Maker</button>
+          <button className="btn btn-outline btn-primary">Login</button>
         </div>
       </div>
 
-      {/* MAIN CARD */}
-      <Card className="m-4 h-[90%]">
-
-        <CardHeader>
-          <div className="flex justify-between items-start">
-            <div>
-              <CardTitle>SmartRoutine Dashboard</CardTitle>
-              <CardDescription>
-                Explore & create routines with AI assistance
-              </CardDescription>
-            </div>
-
-            <Button>Create Routine</Button>
+      {/* Hero Section */}
+      <div className="hero min-h-[70vh] bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-xl">
+            <h1 className="text-5xl font-bold">
+              Build Your <span className="text-primary">Perfect Routine</span>
+            </h1>
+            <p className="py-6 text-lg">
+              Share and explore routines like skincare, diet, workout, morning rituals, night habits, and more.  
+              Let AI build routines tailored to your lifestyle.
+            </p>
+            <button className="btn btn-primary btn-wide">Get Started</button>
           </div>
-        </CardHeader>
+        </div>
+      </div>
 
-        <Divider />
+      {/* Features Section */}
+      <div className="px-6 py-10 grid md:grid-cols-3 gap-6">
+        {/* Card 1 */}
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-primary">Share Routines</h2>
+            <p>Create & explore routines for skincare, diet, work, fitness, sleep, and more!</p>
+          </div>
+        </div>
 
-        <CardBody>
+        {/* Card 2 */}
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-primary">Community Groups</h2>
+            <p>Join communities and share your routine with others.</p>
+          </div>
+        </div>
 
-          {/* ROUTINE OPTION 1 */}
-          <Card className="bg-base-200 shadow">
-            <CardBody>
-              <CardTitle>Skincare Routine</CardTitle>
-              <p>Discover morning & night skincare routines.</p>
-              <CardActions className="justify-end">
-                <Button className="btn-outline btn-primary">View</Button>
-              </CardActions>
-            </CardBody>
-          </Card>
+        {/* Card 3 */}
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-primary">AI Routine Maker</h2>
+            <p>AI builds the best routine based on your lifestyle, body, and schedule.</p>
+          </div>
+        </div>
+      </div>
 
-          {/* ROUTINE OPTION 2 */}
-          <Card className="bg-base-200 shadow">
-            <CardBody>
-              <CardTitle>Diet Routine</CardTitle>
-              <p>Healthy meal patterns designed for your body.</p>
-              <CardActions className="justify-end">
-                <Button className="btn-outline btn-primary">View</Button>
-              </CardActions>
-            </CardBody>
-          </Card>
+      {/* Notion Save Section */}
+      <div className="px-6 pb-10">
+        <div className="card bg-primary text-primary-content shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Save To Notion</h2>
+            <p>Export any routine to your Notion workspace instantly.</p>
+            <button className="btn">Coming Soon</button>
+          </div>
+        </div>
+      </div>
 
-          {/* ROUTINE OPTION 3 */}
-          <Card className="bg-base-200 shadow">
-            <CardBody>
-              <CardTitle>Workout Routine</CardTitle>
-              <p>Personalized fitness routines for all levels.</p>
-              <CardActions className="justify-end">
-                <Button className="btn-outline btn-primary">Explore</Button>
-              </CardActions>
-            </CardBody>
-          </Card>
-
-        </CardBody>
-
-      </Card>
+      {/* Footer */}
+      <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+        <aside>
+          <p>© 2025 SmartRoutine — All Rights Reserved</p>
+        </aside>
+      </footer>
     </div>
-  );
+  )
 }
+
+export default App
